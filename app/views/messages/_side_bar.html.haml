@@ -2,30 +2,19 @@
   .side-bar__head
     .side-bar__head__box
       %p.side-bar__head__box__name
-        = current_user.name 
+        = current_user.name
       %ul.side-bar__head__box__menu
         %li.side-bar__head__box__edit-user
-          = link_to do
-            = icon('fas', 'pen-square' class: 'icon')
+          = link_to  new_group_path do
+            = icon('fas','edit',class: 'icon')
         %li.side-bar__head__box__new-group
           = link_to edit_user_path(current_user) do
-          = icon('fas', 'cog', class: 'icon')
-
-            
-  .groups
-    .group  
-      = link_to "#",class:"group" do
-        %p.group__group-name
-          test 
-        %p.group__latest-message
-          まだメッセージがありません
-      = link_to "#",class:"group" do
-        %p.group__group-name
-          test 
-        %p.group__latest-message
-          まだメッセージがありません
-      = link_to "#",class:"group" do
-        %p.group__group-name
-          test 
-        %p.group__latest-message
-          まだメッセージがありません
+            = icon('fas','cog', class: 'icon')  
+  .side-bar__groups-list
+    -current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group-name
+            = group.name
+          .group__message
+            メッセージはまだありません。

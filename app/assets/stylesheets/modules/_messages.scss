@@ -6,8 +6,8 @@
 .wrapper {
   width: 100vw;
   height: 100vh;
-  
-}
+} 
+
 .side-bar {
   width: 300px;
   background-color: #253141;
@@ -54,11 +54,11 @@
     a {
       color: #ffffff;
       font-size: inherit;
-      
-    }
-  }}}}
+   
+    
+  }}}}}
 
-  .groups {
+  &__groups-list {
   background-color: #2f3e51;
   width: 300px;
   height: (689px);
@@ -77,7 +77,7 @@
    font-size: 15px;
    margin-bottom: 5px;
   }
-  &__latest-message {
+  &__group__message {
     font-size: 11px;
     padding-bottom: 40px;
   }
